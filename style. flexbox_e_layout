@@ -1,0 +1,56 @@
+body, ul, li , p {
+    margin: 0px; 
+    padding: 0px;
+    list-style: none;
+    font-size: arial;
+}
+
+a {
+    text-decoration: none;
+    color: aliceblue;
+
+}
+
+h1 {
+    text-align: center;
+    margin-top: 100px;
+}
+img{
+    max-width: 100%;
+    display: block;
+}
+
+.header {
+    background: black;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+}
+
+.menu {
+ display: flex;  
+ 
+}
+
+.menu li{
+    margin-left: 10px; 
+
+}
+.menu li a {
+    display: block;
+    padding: 10px;
+    background: green;
+}
+/* css flexbox */
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 800px;
+    margin: 0% auto;
+}
+
+.flex > div {
+    flex: 1 1 200px;
+    margin: 10px;
+}
