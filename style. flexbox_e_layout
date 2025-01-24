@@ -1,56 +1,124 @@
-body, ul, li , p {
-    margin: 0px; 
-    padding: 0px;
-    list-style: none;
-    font-size: arial;
-}
-
-a {
-    text-decoration: none;
-    color: aliceblue;
-
-}
-
-h1 {
-    text-align: center;
-    margin-top: 100px;
-}
-img{
-    max-width: 100%;
-    display: block;
-}
-
 .header {
-    background: black;
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-    align-items: center;
+    background: black; /* Define o fundo do cabeçalho como preto */
+    display: flex; /* Torna o cabeçalho um contêiner flexível */
+    justify-content: space-between; /* Distribui os itens dentro do cabeçalho com espaço entre eles */
+    padding: 20px; /* Adiciona 20px de espaçamento interno ao redor do conteúdo */
+    align-items: center; /* Alinha os itens verticalmente no centro */
+    list-style: none; /* Remove as bolinhas padrão */
+}
+
+    
+a {
+    text-decoration: none; /* Remove o sublinhado dos links */
+    color: aliceblue; /* Define a cor do texto do link como azul claro */
 }
 
 .menu {
- display: flex;  
- 
+    display: flex; /* Exibe os itens do menu em linha (horizontal) */
 }
 
-.menu li{
-    margin-left: 10px; 
-
+.menu li {
+    margin-left: 20px; /* Adiciona um espaço de 20px à esquerda de cada item da lista */
 }
+
 .menu li a {
-    display: block;
-    padding: 10px;
-    background: green;
-}
-/* css flexbox */
-.flex {
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 800px;
-    margin: 0% auto;
+    display: block; /* Faz o link ocupar todo o espaço disponível no item da lista */
+    padding: 20px; /* Adiciona 20px de espaço interno ao redor do link */
+    background: black; /* Define o fundo do link como preto */
 }
 
-.flex > div {
-    flex: 1 1 200px;
-    margin: 10px;
-}
+    .menu a {
+        text-decoration: none; /* Remove o sublinhado dos links */
+        color: orange; /* Cor inicial dos links */
+        padding: 10px;
+        transition: background-color 0.3s; /* Suaviza a mudança de cor */
+    }
+    .menu a:hover {
+        background-color: #646262; /* Cor de fundo quando o mouse passar por cima */
+    }
+    body {
+        background-color: #D3D3D3; /* Cor de cinza claro */
+      }
+
+     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     
+     .card {
+        --background: linear-gradient(to left, #f7ba2b 0%, #ea5358 100%); /* Gradiente para o fundo */
+        width: 190px; /* Largura do cartão */
+        height: 254px; /* Altura do cartão */
+        padding: 5px; /* Espaçamento interno ao redor do cartão */
+        border-radius: 1rem; /* Arredonda os cantos */
+        overflow: visible; /* Permite conteúdo transbordar */
+        background: #f7ba2b; /* Cor de fundo inicial */
+        background: var(--background); /* Usa a variável `--background` */
+        position: relative; /* Define a posição relativa para efeitos */
+        z-index: 1; /* Garante que o cartão fique acima de outros elementos */
+    }
+    
+   
+    .card::after {
+        position: absolute; /* Posiciona o pseudo-elemento em relação ao cartão */
+        content: ""; /* Adiciona um conteúdo vazio */
+        top: 30px; /* Desloca o pseudo-elemento 30px para baixo */
+        left: 0; /* Alinha o pseudo-elemento à esquerda */
+        right: 0; /* Alinha o pseudo-elemento à direita */
+        z-index: -1; /* Coloca o pseudo-elemento abaixo do cartão */
+        height: 100%; /* Define a altura como 100% do cartão */
+        width: 100%; /* Define a largura como 100% do cartão */
+        transform: scale(0.8); /* Reduz o tamanho do pseudo-elemento */
+        filter: blur(25px); /* Adiciona um efeito de desfoque */
+        background: #f7ba2b; /* Cor de fundo inicial */
+        background: var(--background); /* Usa a variável `--background` */
+        transition: opacity .5s; /* Suaviza a transição de opacidade */
+    }
+    
+   
+    .card-info {
+        --color: #181818; /* Define uma variável para a cor */
+        background: var(--color); /* Usa a variável como fundo */
+        color: var(--color); /* Define a cor do texto */
+        display: flex; /* Torna o conteúdo flexível */
+        justify-content: center; /* Centraliza horizontalmente */
+        align-items: center; /* Centraliza verticalmente */
+        width: 100%; /* Largura total do cartão */
+        height: 100%; /* Altura total do cartão */
+        overflow: visible; /* Permite conteúdo transbordar */
+        border-radius: .7rem; /* Arredonda os cantos */
+    }
+    
+   
+    .card .title {
+        font-weight: bold; /* Deixa o texto em negrito */
+        letter-spacing: .1em;
+    
+   }
+   
+   /*Hover*/
+   .card:hover::after {
+    opacity: 0;
+   }
+   
+   .card:hover .card-info {
+    color: #f7ba2b;
+    transition: color 1s;
+   }
+   
+      
